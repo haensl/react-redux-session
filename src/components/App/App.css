@@ -1,0 +1,14 @@
+.App {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.App > * {
+  width: 100%;
+  flex: 0 0 100%;
+}
+
+.App .App-Content {
+  display: flex;
+  justify-content: center;
+}
