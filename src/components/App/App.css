@@ -9,6 +9,20 @@
 }
 
 .App .App-Content {
+  padding: 10%;
   display: flex;
   justify-content: center;
+  align-content:center;
+  flex-wrap: wrap;
+}
+
+.App .App-Content .List {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  border-bottom: 1px solid #000;
+}
+
+.App .App-Content .ItemInput {
+  width: 100%;
 }
