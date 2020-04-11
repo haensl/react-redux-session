@@ -4,6 +4,8 @@ import { List, ListItem } from '@material-ui/core';
 import Header from '../Header';
 import ItemInput from '../ItemInput';
 import './App.css';
+import Login from '../Login';
+import Greeting from '../Greeting';
 
 const App = ({
   items,
@@ -11,6 +13,10 @@ const App = ({
 }) => (
   <div className="App">
     <Header />
+   <div className='User-Panel'>
+     <Login/>
+     <Greeting/>
+   </div>
     <main className="App-Content">
       <List className="List">{
         items.map((item, i) => <ListItem key={i}>{item}</ListItem>)
@@ -21,7 +27,7 @@ const App = ({
 );
 
 const mapStateToProps = (state) => ({
-  items: state.items
+  items: state.appReducer.items
 });
 
 export default connect(
