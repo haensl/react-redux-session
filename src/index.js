@@ -5,7 +5,7 @@ import { createStore } from 'redux';
 import 'typeface-roboto';
 import './index.css';
 import App from './components/App';
-import appReducer from './components/App/reducer';
+import rootReducer from './rootReducer';
 
 let devAdditions;
 if (module.hot) {
@@ -17,9 +17,10 @@ if ('__REDUX_DEVTOOLS_EXTENSION__' in window) {
 }
 
 const store = createStore(
-  appReducer,
+  rootReducer,
   devAdditions
 );
+console.log(store.getState())
 
 ReactDOM.render(
   <React.StrictMode>
